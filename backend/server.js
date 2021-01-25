@@ -36,7 +36,7 @@ app.get('/api/employee', async(req, res) => {
 })
 
 // @post route: add new employee
-app.post('/api/employee', async (req, res) => {
+app.post('/api/employee/:empNumber', async (req, res) => {
     const employee = new Employees({
         empNumber: req.body.empNumber,
         empName: req.body.empName,
