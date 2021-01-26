@@ -30,7 +30,7 @@ app.get('/api/employee', async (req, res) => {
 })
 
 // @get route: requested employee
-app.get('/api/employee', async(req, res) => {
+app.get('/api/employee/:empNumber', async(req, res) => {
     const emp = await Employees.find({"empNumber": req.params.empNumber})
     res.send(emp)
 })
